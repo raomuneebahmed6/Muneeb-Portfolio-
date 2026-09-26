@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site, services, skills, experience, projects, stats } from "@/config/site";
 
 const nav = [
@@ -34,6 +35,7 @@ function JsonLd() {
         name: site.name,
         jobTitle: site.role,
         url: site.url,
+        image: `${site.url}${site.photo}`,
         email: `mailto:${site.email}`,
         address: { "@type": "PostalAddress", addressLocality: "Lahore", addressCountry: "PK" },
         knowsAbout: skills.flatMap((s) => s.items),
@@ -99,7 +101,8 @@ export default function Home() {
 
       <main id="main">
         <section id="top" className="hero">
-          <div className="container">
+          <div className="container hero-grid">
+            <div>
             <p className="eyebrow">Digital Marketer · Web Developer · {site.locations.join(" & ")}</p>
             <h1>
               I grow businesses online with <span className="grad">SEO, ads</span> and <span className="grad">websites that convert</span>.
@@ -117,6 +120,17 @@ export default function Home() {
                 <li key={s.label}><strong>{s.value}</strong><span>{s.label}</span></li>
               ))}
             </ul>
+            </div>
+            <div className="hero-photo">
+              <Image
+                src={site.photo}
+                alt={`${site.name}, ${site.role} in ${site.locations.join(" and ")}`}
+                width={640}
+                height={800}
+                priority
+                sizes="(max-width: 860px) 280px, 400px"
+              />
+            </div>
           </div>
         </section>
 

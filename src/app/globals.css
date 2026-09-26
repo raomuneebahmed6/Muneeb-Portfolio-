@@ -115,3 +115,13 @@ p { margin: 0 0 1em; }
   html { scroll-behavior: auto; }
   .btn, .card { transition: none; }
 }
+
+/* Hero photo */
+.hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+.hero-photo { position: relative; justify-self: end; width: min(400px, 100%); }
+.hero-photo::before { content: ""; position: absolute; inset: -12px; border-radius: 28px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); opacity: .55; filter: blur(28px); z-index: 0; }
+.hero-photo img { position: relative; z-index: 1; display: block; width: 100%; height: auto; border-radius: 24px; border: 1px solid var(--border); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-photo { order: -1; justify-self: start; width: min(260px, 70%); }
+}

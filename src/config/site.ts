@@ -27,6 +27,7 @@ export const site = {
     "social media marketing Pakistan",
     "freelance web developer Pakistan",
   ],
+  photo: "/rao-muneeb.webp",
   yearsExperience: 5,
   locations: ["Lahore", "Islamabad"],
 
