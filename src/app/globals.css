@@ -170,7 +170,6 @@ p { margin: 0 0 1em; }
 @media (max-width: 760px) {
   .mobile-menu { display: block; }
   .header-inner > nav { display: none; }
-  .header-cta { margin-left: auto; }
 }
 
 /* Floating WhatsApp button */
@@ -180,3 +179,15 @@ p { margin: 0 0 1em; }
 @media (prefers-reduced-motion: reduce) {
   .available .dot { animation: none; }
 }
+
+/* Header actions & language switch */
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.lang-switch { font-size: .85rem; font-weight: 600; text-decoration: none; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--border); white-space: nowrap; }
+.lang-switch:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 760px) { .header-inner { gap: 8px; } .logo { font-size: 1.1rem; } .lang-switch { padding: 6px 10px; font-size: .8rem; } }
+
+/* Reviews */
+.review { margin: 0; display: flex; flex-direction: column; gap: 20px; }
+.review blockquote { margin: 0; font-size: 1.02rem; line-height: 1.7; }
+.review figcaption { margin-top: auto; display: flex; flex-direction: column; }
+.review figcaption span { color: var(--muted); font-size: .9rem; }

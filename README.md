@@ -5,8 +5,15 @@ Built with Next.js (App Router) and made for Vercel.
 
 ## Edit your content
 
-All text, contact details and links are in **`src/config/site.ts`**. Replace every `TODO` item
-(email, phone, WhatsApp, social links, experience, projects).
+All content (contact details, services, projects, experience, FAQs) is in **`src/config/site.ts`**,
+and fixed page text (headings, buttons) is in **`src/config/ui.ts`**. Every text has an English (`en`)
+and a Roman Urdu (`ur`) version.
+
+- English page: `/`
+- Roman Urdu page: `/ur` (switch with the button in the header)
+
+Client reviews go in `testimonials` in `src/config/site.ts`. Drafts to send to clients for approval
+are in `docs/review-drafts.md`.
 
 ## Run locally
 

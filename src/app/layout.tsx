@@ -8,21 +8,20 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: site.title, template: `%s | ${site.name}` },
-  description: site.description,
+  title: { default: site.title.en, template: `%s | ${site.name}` },
+  description: site.description.en,
   keywords: [...site.keywords],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_PK",
     url: "/",
     siteName: site.name,
-    title: site.title,
-    description: site.description,
+    title: site.title.en,
+    description: site.description.en,
   },
-  twitter: { card: "summary_large_image", title: site.title, description: site.description },
+  twitter: { card: "summary_large_image", title: site.title.en, description: site.description.en },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   // After adding the site to Google Search Console, paste the verification code here:
   // verification: { google: "your-code" },
