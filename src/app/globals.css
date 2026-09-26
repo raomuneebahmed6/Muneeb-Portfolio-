@@ -78,7 +78,6 @@ p { margin: 0 0 1em; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color .2s, transform .2s; }
 .card:hover { border-color: var(--accent); transform: translateY(-3px); }
 .card p { color: var(--muted); margin: 0; }
-.card .result { margin-top: 16px; color: var(--accent); font-weight: 600; }
 .tag { display: inline-block; font-size: .8rem; font-weight: 600; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
 
 /* About */
@@ -125,3 +124,11 @@ p { margin: 0 0 1em; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-photo { order: -1; justify-self: start; width: min(260px, 70%); }
 }
+
+/* Project cards */
+.card.project { padding: 0; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; }
+.card.project img { display: block; width: 100%; height: auto; aspect-ratio: 20 / 9; object-fit: cover; object-position: top; border-bottom: 1px solid var(--border); }
+.project-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+.project-body p { flex: 1; }
+.visit { margin-top: 16px; color: var(--accent); font-weight: 600; font-size: .95rem; }
+.project-body .tag { align-self: flex-start; }

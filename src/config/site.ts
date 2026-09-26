@@ -35,11 +35,11 @@ export const site = {
   phone: "+92 326 7427474",
   whatsapp: "923267427474", // international format, digits only
 
-  // TODO: replace with your real profiles (delete any you don't use)
   socials: {
-    linkedin: "https://www.linkedin.com/in/your-profile",
+    linkedin: "https://www.linkedin.com/in/muneeb-rao-76937a22a",
+    instagram: "https://www.instagram.com/muneebdigitalmarketer",
+    facebook: "https://www.facebook.com/share/1Gy5gkNw7T/",
     github: "https://github.com/raomuneebahmed6",
-    instagram: "https://www.instagram.com/your-handle",
   },
 } as const;
 
@@ -92,30 +92,69 @@ export const experience = [
   },
 ];
 
-// TODO: replace with your real projects and results. Only publish numbers you can back up.
+// Live client websites. Keep only links that still work.
 export const projects = [
   {
-    title: "E-commerce SEO growth",
-    tag: "SEO",
-    text: "Technical fixes, category page optimization and content plan for an online store.",
-    result: "Add your result, e.g. +X% organic traffic",
+    title: "AGC Renovation LLC",
+    url: "https://www.agcrenovationllc.pro/",
+    image: "/projects/agc-renovation.webp",
+    tag: "WordPress · Local SEO",
+    text: "Home renovation and remodeling contractor in Chicago, with service pages, project gallery and quote requests.",
   },
   {
-    title: "Lead generation campaign",
-    tag: "Google & Meta Ads",
-    text: "Full-funnel ad campaign with landing page and conversion tracking for a service business.",
-    result: "Add your result, e.g. X leads at Rs Y each",
+    title: "The Pro Movers",
+    url: "https://www.thepromovers.com/",
+    image: "/projects/the-pro-movers.webp",
+    tag: "WordPress · Local SEO",
+    text: "New York City moving company website with service areas, location pages and free quote forms.",
   },
   {
-    title: "Business website rebuild",
-    tag: "Web Development",
-    text: "New fast, mobile-first website with on-page SEO and lead forms.",
-    result: "Add your result, e.g. PageSpeed score, more enquiries",
+    title: "MidlandPCS",
+    url: "https://midlandpcs.com/",
+    image: "/projects/midlandpcs.webp",
+    tag: "WordPress · Business",
+    text: "Computer, phone, tablet and console repair shop in Columbia, South Carolina, with service listings and contact forms.",
+  },
+  {
+    title: "Phone 1st Stop",
+    url: "https://www.phone1ststop.com/",
+    image: "/projects/phone-1st-stop.webp",
+    tag: "WordPress · Services",
+    text: "Phone, laptop and game console repair business in Fort Worth, Texas, built to turn local searches into calls.",
+  },
+  {
+    title: "Maximus Custom Clothing",
+    url: "https://maximuscustomclothing.com/",
+    image: "/projects/maximus-custom-clothing.webp",
+    tag: "WordPress · E-commerce",
+    text: "Custom suits and shirts brand in New York with appointment booking and an online shop.",
+  },
+  {
+    title: "Shop None of Us",
+    url: "https://shopnoneofus.de/",
+    image: "/projects/shop-none-of-us.webp",
+    tag: "WooCommerce · Fashion",
+    text: "Streetwear store for hoodies, joggers and tracksuits, with collections, product variations and order tracking.",
+  },
+  {
+    title: "Trendzent",
+    url: "https://trendzent.com/",
+    image: "/projects/trendzent.webp",
+    tag: "WordPress · Events",
+    text: "Event management and production company in New Jersey, with services, gallery and enquiry forms.",
+  },
+  {
+    title: "UAE Vibes 360",
+    url: "https://uaevibes360.com/",
+    image: "/projects/uae-vibes-360.webp",
+    tag: "WordPress · News & Blog",
+    text: "News and lifestyle magazine covering things to do, culture and cinema in the UAE.",
   },
 ];
 
 export const stats = [
   { value: `${site.yearsExperience}+`, label: "Years in agencies" },
+  { value: "14+", label: "Websites built" },
   { value: "2", label: "Cities: Lahore & Islamabad" },
   // TODO: add real numbers, e.g. { value: "50+", label: "Clients served" }
 ];

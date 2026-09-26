@@ -194,16 +194,28 @@ export default function Home() {
 
         <section id="work" className="section alt">
           <div className="container">
-            <h2>Selected work</h2>
-            <p className="section-lead">A few examples of the results I deliver for clients.</p>
+            <h2>Websites I&apos;ve built</h2>
+            <p className="section-lead">
+              Live websites for clients in the USA, Europe and the UAE. Click any project to visit the site.
+            </p>
             <div className="grid grid-3">
               {projects.map((p) => (
-                <article key={p.title} className="card">
-                  <span className="tag">{p.tag}</span>
-                  <h3>{p.title}</h3>
-                  <p>{p.text}</p>
-                  <p className="result">{p.result}</p>
-                </article>
+                <a key={p.title} href={p.url} className="card project" target="_blank" rel="noopener">
+                  <Image
+                    src={p.image}
+                    alt={`${p.title} website homepage`}
+                    width={800}
+                    height={360}
+                    loading="lazy"
+                    sizes="(max-width: 700px) 100vw, 360px"
+                  />
+                  <div className="project-body">
+                    <span className="tag">{p.tag}</span>
+                    <h3>{p.title}</h3>
+                    <p>{p.text}</p>
+                    <span className="visit">Visit {new URL(p.url).hostname.replace(/^www\./, "")} ↗</span>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
