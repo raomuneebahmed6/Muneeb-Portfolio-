@@ -196,7 +196,7 @@ export default function Home() {
           <div className="container">
             <h2>Websites I&apos;ve built</h2>
             <p className="section-lead">
-              Live websites for clients in the USA, Europe and the UAE. Click any project to visit the site.
+              Live websites for clients in Pakistan, the USA, Europe, Saudi Arabia and the UAE. Click any project to visit the site.
             </p>
             <div className="grid grid-3">
               {projects.map((p) => (

@@ -76,19 +76,18 @@ export const skills = [
   { group: "Tools", items: ["GA4", "Tag Manager", "Search Console", "Ahrefs / SEMrush", "Meta Business Suite", "Figma"] },
 ];
 
-// TODO: adjust roles, agency names and dates to match your real history
 export const experience = [
   {
-    period: "2023 — Present",
-    role: "Senior Digital Marketer & Web Developer",
-    place: "Marketing Agency, Islamabad",
-    text: "Lead SEO and paid media for agency clients, and build and maintain their websites and landing pages.",
+    period: "2024 — Present",
+    role: "Senior Web Developer & Manager",
+    place: "Swiftwave Digital",
+    text: "Lead website development and manage projects end to end, from planning and design to launch, SEO and client handover.",
   },
   {
-    period: "2021 — 2023",
-    role: "Digital Marketing Executive & Web Developer",
-    place: "Marketing Agency, Lahore",
-    text: "Ran Google and Meta ad campaigns, managed social media accounts and built WordPress websites for local businesses.",
+    period: "2021 — 2024",
+    role: "Digital Marketer & Web Developer",
+    place: "Logico Info Tech, Lahore",
+    text: "Three years building WordPress and WooCommerce websites and running SEO, Google Ads and social media campaigns for local and international clients.",
   },
 ];
 
@@ -102,11 +101,88 @@ export const projects = [
     text: "Home renovation and remodeling contractor in Chicago, with service pages, project gallery and quote requests.",
   },
   {
+    title: "Bilal Hospital Rawalpindi",
+    url: "https://bilal-hospital-site.vercel.app/",
+    image: "/projects/bilal-hospital.webp",
+    tag: "Next.js · Healthcare",
+    text: "Multispecialty hospital website with 24/7 emergency info, specialist clinics, diagnostics and English/Urdu support.",
+  },
+  {
+    title: "Zoom Haier Store",
+    url: "https://zoomhaierstore.com/",
+    image: "/projects/zoom-haier-store.webp",
+    tag: "WooCommerce · E-commerce",
+    text: "Online store for an authorized Haier dealer in Lahore, selling ACs, LEDs, fridges and washing machines.",
+  },
+  {
     title: "The Pro Movers",
     url: "https://www.thepromovers.com/",
     image: "/projects/the-pro-movers.webp",
     tag: "WordPress · Local SEO",
     text: "New York City moving company website with service areas, location pages and free quote forms.",
+  },
+  {
+    title: "eKarobar360",
+    url: "https://www.ekarobar360.com/",
+    image: "/projects/ekarobar360.webp",
+    tag: "Custom Website · SaaS",
+    text: "Marketing site for a Pakistani business app covering POS, inventory, customer udhaar, expenses and reports.",
+  },
+  {
+    title: "Aroma Curls",
+    url: "https://aromacurls.com/",
+    image: "/projects/aroma-curls.webp",
+    tag: "Custom Website · E-commerce",
+    text: "Curly hair care brand store with collections, bundle builder, hair quiz and order tracking.",
+  },
+  {
+    title: "OPS-Automate",
+    url: "https://ops-automate.com/",
+    image: "/projects/ops-automate.webp",
+    tag: "Custom Website · B2B",
+    text: "Lead generation site for a company placing offshore junior accountants with US CPA firms.",
+  },
+  {
+    title: "EIQAN",
+    url: "https://www.eiqan.com/",
+    image: "/projects/eiqan.webp",
+    tag: "Next.js · Transport",
+    text: "Student transportation, corporate shuttle and bus rental company in Riyadh, Jeddah and Dammam, Saudi Arabia.",
+  },
+  {
+    title: "Little Explorers World",
+    url: "https://littleexplorersworld.com/",
+    image: "/projects/little-explorers-world.webp",
+    tag: "Custom Website · Local SEO",
+    text: "Kids indoor play zone in Bahria Town, Islamabad, with play zones, birthday party packages and bookings.",
+  },
+  {
+    title: "Maximus Custom Clothing",
+    url: "https://maximuscustomclothing.com/",
+    image: "/projects/maximus-custom-clothing.webp",
+    tag: "WordPress · E-commerce",
+    text: "Custom suits and shirts brand in New York with appointment booking and an online shop.",
+  },
+  {
+    title: "ACM Asia Cosmetics",
+    url: "https://acmpvtltd.com/",
+    image: "/projects/acm-cosmetics.webp",
+    tag: "Custom Website · Manufacturing",
+    text: "Private label cosmetics manufacturer in Pakistan, showcasing 100+ products across 10 categories.",
+  },
+  {
+    title: "Goodwill Build",
+    url: "https://goodwillbuild.com/",
+    image: "/projects/goodwill-build.webp",
+    tag: "WordPress · Construction",
+    text: "Construction and luxury renovation company in Islamabad, with services, projects and video showcase.",
+  },
+  {
+    title: "Nasir Oil Expert",
+    url: "https://www.nasiroilexpert.com/",
+    image: "/projects/nasir-oil-expert.webp",
+    tag: "Custom Website · E-commerce",
+    text: "Herbal hair oil and shampoo brand with nationwide delivery and an English/Urdu storefront.",
   },
   {
     title: "MidlandPCS",
@@ -123,11 +199,18 @@ export const projects = [
     text: "Phone, laptop and game console repair business in Fort Worth, Texas, built to turn local searches into calls.",
   },
   {
-    title: "Maximus Custom Clothing",
-    url: "https://maximuscustomclothing.com/",
-    image: "/projects/maximus-custom-clothing.webp",
-    tag: "WordPress · E-commerce",
-    text: "Custom suits and shirts brand in New York with appointment booking and an online shop.",
+    title: "Punjab Auto Stores",
+    url: "https://punjabautostores.com/",
+    image: "/projects/punjab-auto-stores.webp",
+    tag: "WooCommerce · Auto Parts",
+    text: "Genuine truck spare parts store with brand catalogues for Hino, Isuzu, Bedford and more.",
+  },
+  {
+    title: "Pioneer Group of Companies",
+    url: "https://pioneerdeltagroup.com/",
+    image: "/projects/pioneer-delta-group.webp",
+    tag: "WordPress · Industrial",
+    text: "Industrial valve supplier and seamless pipe distributor based in Karachi, with product catalogue and quote requests.",
   },
   {
     title: "Shop None of Us",
@@ -154,7 +237,7 @@ export const projects = [
 
 export const stats = [
   { value: `${site.yearsExperience}+`, label: "Years in agencies" },
-  { value: "14+", label: "Websites built" },
+  { value: "25+", label: "Websites built" },
   { value: "2", label: "Cities: Lahore & Islamabad" },
   // TODO: add real numbers, e.g. { value: "50+", label: "Clients served" }
 ];
