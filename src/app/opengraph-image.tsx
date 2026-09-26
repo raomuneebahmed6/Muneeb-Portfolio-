@@ -16,15 +16,15 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(135deg, #0b0f19 0%, #1c1850 100%)",
+          background: "linear-gradient(135deg, #061433 0%, #0f2a66 55%, #1d4ed8 100%)",
           color: "#fff",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ fontSize: 36, color: "#a79dff" }}>{site.locations.join(" · ")}</div>
+        <div style={{ fontSize: 36, color: "#7dd3fc" }}>{site.locations.join(" · ")}</div>
         <div style={{ fontSize: 96, fontWeight: 800, marginTop: 16 }}>{site.name}</div>
         <div style={{ fontSize: 48, marginTop: 8, color: "#d6d9e5" }}>{site.role}</div>
-        <div style={{ fontSize: 30, marginTop: 40, color: "#9aa3b8" }}>
+        <div style={{ fontSize: 30, marginTop: 40, color: "#b7c4e2" }}>
           {`${site.yearsExperience}+ years · SEO · Google & Meta Ads · Websites`}
         </div>
       </div>

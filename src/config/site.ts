@@ -51,7 +51,6 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/muneeb-rao-76937a22a",
     instagram: "https://www.instagram.com/muneebdigitalmarketer",
     facebook: "https://www.facebook.com/share/1Gy5gkNw7T/",
-    github: "https://github.com/raomuneebahmed6",
   },
 } as const;
 
