@@ -31,10 +31,9 @@ export const site = {
   yearsExperience: 5,
   locations: ["Lahore", "Islamabad"],
 
-  // TODO: replace with your real contact details
-  email: "hello@example.com",
-  phone: "+92 300 0000000",
-  whatsapp: "923000000000", // international format, digits only
+  email: "raomuneebahmed6@gmail.com",
+  phone: "+92 326 7427474",
+  whatsapp: "923267427474", // international format, digits only
 
   // TODO: replace with your real profiles (delete any you don't use)
   socials: {

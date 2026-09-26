@@ -231,7 +231,7 @@ export default function Home() {
               <a href={whatsappHref} className="btn" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
               <a href={`mailto:${site.email}`} className="btn btn-ghost">{site.email}</a>
             </div>
-            <p className="muted">Or call {site.phone}</p>
+            <p className="muted">Or call <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a></p>
           </div>
         </section>
       </main>
