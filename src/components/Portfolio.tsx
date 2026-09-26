@@ -10,6 +10,7 @@ import {
   workSteps,
   testimonials,
   faqs,
+  featuredProject,
   type Lang,
 } from "@/config/site";
 import { ui } from "@/config/ui";
@@ -109,7 +110,7 @@ export function Portfolio({ lang }: { lang: Lang }) {
   ];
   const [h1, h2, h3, h4, h5] = t.headline;
   const socials = Object.entries(site.socials).filter(([, v]) => v) as [string, string][];
-  const brands = projects.map((p) => p.title);
+  const brands = [featuredProject.title, ...projects.map((p) => p.title)];
 
   return (
     <div lang={lang === "en" ? "en" : "ur-Latn"}>
@@ -297,6 +298,33 @@ export function Portfolio({ lang }: { lang: Lang }) {
               <h2>{t.workTitle}</h2>
               <p className="section-lead">{t.workLead}</p>
             </div>
+            <a href={featuredProject.url} className="featured-project" target="_blank" rel="noopener" data-reveal>
+              <div className="fp-shot">
+                <span className="fp-browser" aria-hidden="true"><i /><i /><i /></span>
+                <Image
+                  src={featuredProject.image}
+                  alt={`${featuredProject.title} ${t.screenshotAlt}`}
+                  width={1200}
+                  height={675}
+                  sizes="(max-width: 900px) 100vw, 640px"
+                />
+              </div>
+              <div className="fp-body">
+                <span className="fp-label">★ {t.featuredLabel}</span>
+                <h3>{featuredProject.title}</h3>
+                <span className="tag">{featuredProject.tag}</span>
+                <p>{featuredProject.text[lang]}</p>
+                <ul className="checks">
+                  {featuredProject.points[lang].map((pt) => (
+                    <li key={pt}><span className="check"><Icon name="check" size={14} /></span>{pt}</li>
+                  ))}
+                </ul>
+                <span className="btn">
+                  {t.visitSite} <Icon name="arrow" size={16} />
+                </span>
+              </div>
+            </a>
+
             <ProjectGrid
               projects={projects.map((p) => ({ title: p.title, url: p.url, image: p.image, tag: p.tag, text: p.text[lang] }))}
               allLabel={t.filterAll}

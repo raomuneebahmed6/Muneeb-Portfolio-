@@ -237,6 +237,32 @@ export const experience = [
   },
 ];
 
+// Highlighted project shown in a large spotlight above the project grid.
+export const featuredProject = {
+  title: "Nibaha Haq",
+  url: "https://nibahahaq.com/",
+  image: "/projects/nibaha-haq.webp",
+  tag: "Next.js · Agency Website",
+  text: {
+    en: "A complete website for Nibaha Haq, a digital marketing and technology agency. It presents the agency's services, training courses, portfolio and blog in one fast, modern site built to turn visitors into clients.",
+    ur: "Nibaha Haq, ek digital marketing aur technology agency, ki mukammal website. Is mein agency ki services, training courses, portfolio aur blog ek hi fast aur modern website mein hain, jo visitors ko clients banane ke liye bani hai.",
+  },
+  points: {
+    en: [
+      "Built with Next.js: fast, SEO-ready and mobile-friendly",
+      "8 service areas: SEO, social media, web development, Meta & Google Ads, YouTube automation, graphic design",
+      "Courses, portfolio and blog sections",
+      "Clear calls to action for free consultations and quotes",
+    ],
+    ur: [
+      "Next.js se bani: fast, SEO-ready aur mobile-friendly",
+      "8 services: SEO, social media, web development, Meta aur Google Ads, YouTube automation, graphic design",
+      "Courses, portfolio aur blog ke sections",
+      "Free consultation aur quote ke liye saaf buttons",
+    ],
+  },
+};
+
 // Live client websites. Keep only links that still work.
 export const projects = [
   {
