@@ -38,6 +38,11 @@ npm run build   # production build check
 3. Vercel → **Settings → Environment Variables**: set `NEXT_PUBLIC_SITE_URL=https://www.yourdomain.com`,
    then redeploy so the sitemap and canonical URLs use your domain.
 
+## Google Analytics (optional)
+
+Create a GA4 property, then in Vercel → **Settings → Environment Variables** add
+`NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX` and redeploy. Without it, no tracking script is loaded.
+
 ## After going live
 
 1. Add the site to **Google Search Console**, put the verification code in `src/app/layout.tsx`

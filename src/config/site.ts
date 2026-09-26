@@ -12,9 +12,9 @@ export const site = {
   url: resolveSiteUrl(),
   name: "Rao Muneeb",
   role: "Digital Marketer & Web Developer",
-  title: "Rao Muneeb — Digital Marketer & Web Developer in Lahore & Islamabad",
+  title: "Rao Muneeb — Freelance Digital Marketer & Web Developer | Lahore & Islamabad",
   description:
-    "Rao Muneeb is a digital marketer and web developer with 5+ years of agency experience in Lahore and Islamabad. SEO, Google & Meta Ads, social media marketing and fast, conversion-focused websites.",
+    "Rao Muneeb is a freelance digital marketer and web developer with 5+ years of agency experience in Lahore and Islamabad. Websites, SEO, social media marketing, Meta Ads, Google Ads, graphic design and video editing.",
   keywords: [
     "Rao Muneeb",
     "digital marketer Lahore",
@@ -25,6 +25,10 @@ export const site = {
     "Google Ads expert",
     "Meta Ads specialist",
     "social media marketing Pakistan",
+    "social media manager Islamabad",
+    "graphic designer Islamabad",
+    "video editor Pakistan",
+    "freelance digital marketer Pakistan",
     "freelance web developer Pakistan",
   ],
   photo: "/rao-muneeb.webp",
@@ -45,34 +49,86 @@ export const site = {
 
 export const services = [
   {
+    icon: "code",
+    title: "Website Development",
+    text: "Fast, mobile-first websites and online stores in WordPress, WooCommerce, Shopify and Next.js, built to rank and to turn visitors into leads.",
+  },
+  {
+    icon: "search",
     title: "Search Engine Optimization",
     text: "Technical audits, keyword research, on-page optimization, local SEO and link building that bring steady organic traffic.",
   },
   {
-    title: "Paid Ads (Google & Meta)",
-    text: "Search, Display, YouTube, Facebook and Instagram campaigns built around cost per lead and return on ad spend.",
-  },
-  {
+    icon: "social",
     title: "Social Media Marketing",
-    text: "Content calendars, creatives and community management that grow brands on Instagram, Facebook, TikTok and LinkedIn.",
+    text: "Content calendars, posting and page management that grow brands on Facebook, Instagram, TikTok and LinkedIn.",
   },
   {
-    title: "Website Development",
-    text: "Fast, mobile-first websites in WordPress, Shopify, Next.js and React, built to rank and to convert visitors into leads.",
+    icon: "meta",
+    title: "Meta Ads (Facebook & Instagram)",
+    text: "Lead generation, sales and awareness campaigns with sharp targeting, retargeting and Pixel tracking, built around cost per result.",
   },
   {
+    icon: "ads",
+    title: "Google Ads",
+    text: "Search, Display, Shopping and YouTube campaigns that put your business in front of people already searching for it.",
+  },
+  {
+    icon: "design",
+    title: "Graphic Design",
+    text: "Social media posts, ad creatives, logos, banners, flyers and brand kits that look professional and stay on brand.",
+  },
+  {
+    icon: "video",
+    title: "Video Editing",
+    text: "Reels, TikToks, YouTube videos and video ads with clean cuts, captions, music and motion graphics that stop the scroll.",
+  },
+  {
+    icon: "funnel",
     title: "Landing Pages & CRO",
-    text: "High-converting landing pages, A/B testing and funnel fixes so your ad budget turns into real enquiries.",
+    text: "High-converting landing pages and funnel fixes so your ad budget turns into real enquiries and sales.",
   },
   {
+    icon: "chart",
     title: "Analytics & Tracking",
-    text: "GA4, Google Tag Manager, Meta Pixel and conversion API setups, with clear reports on what is working.",
+    text: "GA4, Google Tag Manager, Meta Pixel and Conversions API setups, with clear monthly reports on what is working.",
   },
+];
+
+// Ways to work together as a freelancer. "message" pre-fills the WhatsApp chat.
+export const packages = [
+  {
+    title: "Website Project",
+    text: "A new website, online store or redesign, delivered ready to rank and convert.",
+    items: ["Design & development", "Mobile-first & fast", "On-page SEO & tracking setup", "Training and support after launch"],
+    message: "Hi Muneeb, I need a website. Can we discuss?",
+  },
+  {
+    title: "Monthly Marketing",
+    text: "Ongoing growth for your brand, managed end to end every month.",
+    items: ["Social media management", "Meta Ads & Google Ads", "Ad creatives & reels", "Monthly performance report"],
+    message: "Hi Muneeb, I'm interested in monthly social media and ads management.",
+    featured: true,
+  },
+  {
+    title: "Creative & One-off Tasks",
+    text: "Quick, high-quality work when you just need one thing done well.",
+    items: ["Graphic design & branding", "Video editing & reels", "SEO audit", "Ad account or Pixel setup"],
+    message: "Hi Muneeb, I have a design / video / one-off task for you.",
+  },
+];
+
+export const workSteps = [
+  { title: "Free consultation", text: "We talk about your business, goals and budget on a call or WhatsApp." },
+  { title: "Strategy & proposal", text: "You get a clear plan with scope, timeline and price. No surprises." },
+  { title: "Build & launch", text: "I design, build and launch, sharing progress with you at every step." },
+  { title: "Grow & report", text: "I track results, send reports and keep improving what works." },
 ];
 
 export const skills = [
   { group: "Marketing", items: ["SEO", "Google Ads", "Meta Ads", "Social Media", "Content Strategy", "Email Marketing"] },
   { group: "Development", items: ["HTML / CSS", "JavaScript", "React", "Next.js", "WordPress", "Shopify"] },
+  { group: "Design & Video", items: ["Photoshop", "Illustrator", "Canva", "Premiere Pro", "CapCut"] },
   { group: "Tools", items: ["GA4", "Tag Manager", "Search Console", "Ahrefs / SEMrush", "Meta Business Suite", "Figma"] },
 ];
 
