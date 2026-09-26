@@ -78,13 +78,13 @@ export const skills = [
 
 export const experience = [
   {
-    period: "2024 — Present",
+    period: "2025 — Present",
     role: "Senior Web Developer & Manager",
-    place: "Swiftwave Digital",
+    place: "Swiftwave Digital, Bahria Town Phase 4, Islamabad",
     text: "Lead website development and manage projects end to end, from planning and design to launch, SEO and client handover.",
   },
   {
-    period: "2021 — 2024",
+    period: "2022 — 2025",
     role: "Digital Marketer & Web Developer",
     place: "Logico Info Tech, Lahore",
     text: "Three years building WordPress and WooCommerce websites and running SEO, Google Ads and social media campaigns for local and international clients.",
