@@ -12,15 +12,21 @@ export function ProjectGrid({
   allLabel,
   visitLabel,
   altSuffix,
+  showAllLabel,
 }: {
   projects: Project[];
   allLabel: string;
   visitLabel: string;
   altSuffix: string;
+  showAllLabel: string;
 }) {
   const platform = (p: Project) => p.tag.split(" · ")[0];
   const filters = [allLabel, ...Array.from(new Set(projects.map(platform)))];
   const [active, setActive] = useState(allLabel);
+  // Only the first few cards show until "show all" is pressed. The rest stay in the HTML
+  // (hidden with CSS) so search engines still see every project.
+  const [expanded, setExpanded] = useState(false);
+  const limit = 6;
   const shown = active === allLabel ? projects : projects.filter((p) => platform(p) === active);
 
   return (
@@ -32,14 +38,17 @@ export function ProjectGrid({
             role="tab"
             aria-selected={active === f}
             className={active === f ? "active" : ""}
-            onClick={() => setActive(f)}
+            onClick={() => {
+              setActive(f);
+              setExpanded(false);
+            }}
           >
             {f}
             <span>{f === allLabel ? projects.length : projects.filter((p) => platform(p) === f).length}</span>
           </button>
         ))}
       </div>
-      <div className="grid grid-3 projects">
+      <div className={`grid grid-3 projects${expanded || shown.length <= limit ? "" : " collapsed"}`}>
         {shown.map((p) => (
           <a key={p.title} href={p.url} className="card project" target="_blank" rel="noopener">
             <div className="shot">
@@ -59,6 +68,13 @@ export function ProjectGrid({
           </a>
         ))}
       </div>
+      {!expanded && shown.length > limit && (
+        <div className="show-all">
+          <button className="btn btn-ghost btn-lg" onClick={() => setExpanded(true)}>
+            {showAllLabel} ({shown.length})
+          </button>
+        </div>
+      )}
     </>
   );
 }

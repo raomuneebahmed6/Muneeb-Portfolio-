@@ -23,7 +23,7 @@ function whatsappLink(message: string) {
 }
 
 function JsonLd({ lang }: { lang: Lang }) {
-  const sameAs = Object.values(site.socials);
+  const sameAs = Object.values(site.socials).filter(Boolean);
   const pageUrl = lang === "en" ? site.url : `${site.url}/ur`;
   const data = {
     "@context": "https://schema.org",
@@ -108,7 +108,7 @@ export function Portfolio({ lang }: { lang: Lang }) {
     { href: "#contact", label: t.nav.contact },
   ];
   const [h1, h2, h3, h4, h5] = t.headline;
-  const socials = Object.entries(site.socials) as [keyof typeof site.socials, string][];
+  const socials = Object.entries(site.socials).filter(([, v]) => v) as [string, string][];
   const brands = projects.map((p) => p.title);
 
   return (
@@ -175,15 +175,17 @@ export function Portfolio({ lang }: { lang: Lang }) {
                 </a>
                 <a href="#work" className="btn btn-lg btn-ghost">{t.seeWork}</a>
               </div>
-              <ul className="hero-socials anim-up d5">
-                {socials.map(([k, v]) => (
-                  <li key={k}>
-                    <a href={v} target="_blank" rel="noopener noreferrer me" aria-label={k}>
-                      <Icon name={k} size={20} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              {socials.length > 0 && (
+                <ul className="hero-socials anim-up d5">
+                  {socials.map(([k, v]) => (
+                    <li key={k}>
+                      <a href={v} target="_blank" rel="noopener noreferrer me" aria-label={k}>
+                        <Icon name={k} size={20} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             <div className="hero-visual anim-zoom">
@@ -226,7 +228,7 @@ export function Portfolio({ lang }: { lang: Lang }) {
               <span className="kicker">{t.servicesTitle}</span>
               <h2>{t.servicesLead}</h2>
             </div>
-            <div className="grid grid-3">
+            <div className="grid grid-3 services-grid">
               {services.map((s, i) => (
                 <article key={s.title.en} className="card service" data-reveal style={{ transitionDelay: `${(i % 3) * 80}ms` }}>
                   <span className="icon"><Icon name={s.icon} size={26} /></span>
@@ -300,6 +302,7 @@ export function Portfolio({ lang }: { lang: Lang }) {
               allLabel={t.filterAll}
               visitLabel={t.visitSite}
               altSuffix={t.screenshotAlt}
+              showAllLabel={t.showAll}
             />
           </div>
         </section>
@@ -447,15 +450,17 @@ export function Portfolio({ lang }: { lang: Lang }) {
                 <span className="logo-text">Rao <b>Muneeb</b></span>
               </a>
               <p>{t.footerBio}</p>
-              <ul className="footer-socials">
-                {socials.map(([k, v]) => (
-                  <li key={k}>
-                    <a href={v} target="_blank" rel="noopener noreferrer me" aria-label={k}>
-                      <Icon name={k} size={18} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              {socials.length > 0 && (
+                <ul className="footer-socials">
+                  {socials.map(([k, v]) => (
+                    <li key={k}>
+                      <a href={v} target="_blank" rel="noopener noreferrer me" aria-label={k}>
+                        <Icon name={k} size={18} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
             <div>
               <h3>{t.footerLinks}</h3>

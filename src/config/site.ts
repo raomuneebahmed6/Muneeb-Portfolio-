@@ -47,11 +47,10 @@ export const site = {
   phone: "+92 326 7427474",
   whatsapp: "923267427474", // international format, digits only
 
-  socials: {
-    linkedin: "https://www.linkedin.com/in/muneeb-rao-76937a22a",
-    instagram: "https://www.instagram.com/muneebdigitalmarketer",
-    facebook: "https://www.facebook.com/share/1Gy5gkNw7T/",
-  },
+  // Social profiles. Icons appear in the hero and footer only for links added here.
+  // Supported keys: linkedin, instagram, facebook. Example:
+  //   linkedin: "https://www.linkedin.com/in/your-profile",
+  socials: {} as Partial<Record<"linkedin" | "instagram" | "facebook", string>>,
 } as const;
 
 export const services = [
