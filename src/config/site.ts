@@ -55,28 +55,6 @@ export const services = [
   { icon: "chart", title: "Tracking & Reports", text: "GA4, Pixel and Tag Manager set up properly, with simple reports you can understand." },
 ];
 
-// "Work with me" cards. `message` pre-fills the WhatsApp chat.
-export const workWithMe = [
-  {
-    emoji: "💻",
-    title: "Need a website?",
-    text: "A new site, an online store or a redesign of your old one. I'll handle design, build, SEO and launch.",
-    message: "Hi Muneeb, I need a website. Can we talk?",
-  },
-  {
-    emoji: "📈",
-    title: "Need more customers?",
-    text: "Monthly social media, Meta Ads and Google Ads, managed by me with a clear report every month.",
-    message: "Hi Muneeb, I want help with ads and social media for my business.",
-  },
-  {
-    emoji: "🎨",
-    title: "Need design or video?",
-    text: "Ad creatives, social posts, logos, reels and video ads. Quick turnaround, no long contracts.",
-    message: "Hi Muneeb, I have a design / video task for you.",
-  },
-];
-
 export const skills = [
   { group: "Marketing", items: ["SEO", "Google Ads", "Meta Ads", "Social Media", "Content Strategy", "Email Marketing"] },
   { group: "Websites", items: ["WordPress CMS", "WooCommerce", "Shopify", "Next.js", "E-commerce", "HTML / CSS / JS"] },
@@ -275,25 +253,3 @@ export const stats = [
   { value: "5", label: "Countries served" },
 ];
 
-export const faqs = [
-  {
-    q: "Are you available for freelance projects?",
-    a: "Yes. Alongside my agency role I take on freelance clients for websites, social media marketing, Meta Ads, Google Ads, graphic design and video editing, either as one-off projects or monthly retainers.",
-  },
-  {
-    q: "Do you also design ad creatives and edit videos?",
-    a: "Yes. I design social media posts and ad creatives and edit reels and video ads myself, so your campaigns, content and website all match.",
-  },
-  {
-    q: "Do you work with clients outside Lahore and Islamabad?",
-    a: "Yes. I work with businesses across Pakistan and internationally. Most projects run fully online.",
-  },
-  {
-    q: "Can you handle both the website and the marketing?",
-    a: "Yes. I build the website with SEO and tracking in place from day one, then run SEO and ad campaigns on top of it, so nothing gets lost between teams.",
-  },
-  {
-    q: "How long does SEO take to show results?",
-    a: "Technical fixes can help within weeks. Steady growth in rankings and organic traffic usually takes 3 to 6 months, depending on competition.",
-  },
-];

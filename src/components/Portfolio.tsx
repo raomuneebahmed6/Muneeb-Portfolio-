@@ -1,28 +1,19 @@
 import Image from "next/image";
-import {
-  site,
-  services,
-  skills,
-  experience,
-  projects,
-  stats,
-  workWithMe,
-  testimonials,
-  faqs,
-  featuredProject,
-} from "@/config/site";
+import { site, services, skills, experience, projects, stats, testimonials, featuredProject } from "@/config/site";
 import { Icon } from "@/components/Icon";
 import { Effects } from "@/components/Effects";
 import { RoleRotator } from "@/components/RoleRotator";
 import { ProjectGrid } from "@/components/ProjectGrid";
+import { Avatar } from "@/components/Avatar";
+import { ScrollText } from "@/components/ScrollText";
+import { ScrollStatement } from "@/components/ScrollStatement";
 
 const roles = ["Web Developer", "SEO Expert", "Meta Ads Specialist", "Google Ads Expert", "Social Media Marketer", "Graphic Designer", "Video Editor"];
 
 const nav = [
   { href: "#about", label: "About" },
-  { href: "#services", label: "What I do" },
+  { href: "#services", label: "Services" },
   { href: "#work", label: "Work" },
-  { href: "#journey", label: "Journey" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -55,14 +46,6 @@ function JsonLd() {
         name: site.name,
         publisher: { "@id": `${site.url}/#person` },
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: faqs.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
-        })),
-      },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
@@ -83,9 +66,6 @@ export function Portfolio() {
   const whatsappHref = whatsappLink("Hi Muneeb! I saw your portfolio and would like to talk about a project.");
   const socials = Object.entries(site.socials).filter(([, v]) => v) as [string, string][];
   const current = experience[0];
-  const tools = ["WordPress", "WooCommerce", "Shopify", "Next.js", "Meta Ads", "Google Ads", "GA4", "Photoshop", "Illustrator", "Premiere Pro", "After Effects", "Canva", "CapCut", "Figma"];
-  const marqueeA = ["Websites", "SEO", "Meta Ads", "Google Ads", "Social Media", "Graphic Design", "Video Editing", "Online Stores"];
-  const marqueeB = ["WordPress", "Shopify", "Next.js", "WooCommerce", "Photoshop", "Premiere Pro", "After Effects", "GA4"];
 
   return (
     <>
@@ -146,9 +126,8 @@ export function Portfolio() {
                 <span className="sr-only">{roles.join(", ")}</span>
               </p>
               <p className="lead anim-up d4">
-                I help small businesses and brands grow online with <strong>websites</strong>, <strong>ads</strong> and{" "}
-                <strong>content</strong> that actually bring customers. {site.yearsExperience}+ years in the game, working
-                from Islamabad with clients all over the world.
+                I build websites and run ads that bring customers. {site.yearsExperience}+ years, 25+ websites, clients
+                all over the world.
               </p>
               <div className="cta-row anim-up d5">
                 <a href={whatsappHref} className="btn btn-lg" target="_blank" rel="noopener noreferrer">
@@ -156,127 +135,44 @@ export function Portfolio() {
                 </a>
                 <a href="#work" className="btn btn-lg btn-ghost">See my work ↓</a>
               </div>
-              {socials.length > 0 && (
-                <ul className="hero-socials anim-up d5">
-                  {socials.map(([k, v]) => (
-                    <li key={k}>
-                      <a href={v} target="_blank" rel="noopener noreferrer me" aria-label={k}>
-                        <Icon name={k} size={20} />
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
             </div>
 
             <div className="hero-visual anim-zoom">
-              <div className="polaroid">
-                <span className="tape" aria-hidden="true" />
-                <Image
-                  src={site.photo}
-                  alt={`${site.name}, freelance digital marketer and web developer`}
-                  width={640}
-                  height={800}
-                  priority
-                  sizes="(max-width: 900px) 260px, 380px"
-                />
-                <span className="polaroid-caption">Islamabad, PK 📍</span>
-              </div>
-              <span className="note" aria-hidden="true">
-                that&apos;s me!
-                <svg viewBox="0 0 80 50" width="70" height="44" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                  <path d="M4 6c18 2 40 10 52 30" />
-                  <path d="M46 34l10 3 2-11" />
-                </svg>
+              <div className="avatar-ring" aria-hidden="true" />
+              <Avatar />
+              <span className="avatar-hint hand" aria-hidden="true">
+                <span className="on-mouse">move your mouse 👀</span>
+                <span className="on-touch">tap anywhere 👆</span>
               </span>
-              <div className="spin-badge" aria-hidden="true">
-                <svg viewBox="0 0 120 120">
-                  <defs>
-                    <path id="circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
-                  </defs>
-                  <text>
-                    <textPath href="#circle" textLength="286" lengthAdjust="spacing">FREELANCER • OPEN TO WORK • </textPath>
-                  </text>
-                </svg>
-                <span>✦</span>
-              </div>
-              <span className="sticker s1" aria-hidden="true">🚀</span>
-              <span className="sticker s2" aria-hidden="true">📈</span>
-              <span className="sticker s3" aria-hidden="true">💡</span>
             </div>
           </div>
         </section>
 
-        {/* Skills tape */}
-        <section className="tape-band" aria-label="What I work with">
-          <div className="tape-row">
-            <div className="marquee-track">
-              {[...marqueeA, ...marqueeA].map((m, i) => (
-                <span key={i} aria-hidden={i >= marqueeA.length}>{m}</span>
-              ))}
-            </div>
-          </div>
-          <div className="tape-row alt" aria-hidden="true">
-            <div className="marquee-track reverse">
-              {[...marqueeB, ...marqueeB].map((m, i) => (
-                <span key={i}>{m}</span>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ScrollText
+          top={["Websites", "SEO", "Meta Ads", "Google Ads", "Social Media"]}
+          bottom={["Graphic Design", "Video Editing", "Online Stores", "Branding"]}
+        />
 
-        {/* About (bento grid) */}
-        <section id="about" className="section">
+        {/* About */}
+        <section id="about" className="section about">
           <div className="container">
-            <div className="section-head" data-reveal>
-              <span className="kicker">About me</span>
-              <h2>A bit about me <span className="hand-inline">(the short version)</span></h2>
-            </div>
-            <div className="bento">
-              <article className="bento-card b-intro" data-reveal>
-                <p className="big">
-                  Hi! I&apos;m Muneeb. I started freelancing in 2021, building WordPress sites and running small ad campaigns
-                  for local businesses. Since then I&apos;ve worked in agencies in Lahore and Islamabad and built 25+ websites
-                  for clients in Pakistan, the USA, Europe, Saudi Arabia and the UAE.
-                </p>
-                <p>
-                  What makes me different? I do <b>both</b> sides: I build your website <i>and</i> bring people to it with
-                  SEO, ads, design and video. One person, one plan, no back-and-forth between five different teams.
-                </p>
-              </article>
-
-              <article className="bento-card b-location" data-reveal>
-                <span className="b-emoji">📍</span>
-                <h3>Based in Islamabad</h3>
-                <p>Bahria Town, Pakistan. Working with clients worldwide, mostly online.</p>
-              </article>
-
-              <article className="bento-card b-now" data-reveal>
-                <span className="b-label"><span className="dot" /> Currently</span>
-                <h3>{current.role}</h3>
-                <p>at {current.place.split(",")[0]}, and taking freelance projects on the side.</p>
-              </article>
-
-              <article className="bento-card b-stats" data-reveal>
+            <span className="kicker" data-reveal>About me</span>
+            <ScrollStatement
+              text="I started freelancing in 2021. Since then I have worked in agencies in Lahore and Islamabad and built websites for brands in Pakistan, the USA, Europe and the Gulf. I do both sides: I build your website and bring people to it with SEO, ads, design and video."
+              highlight={["websites", "both", "SEO", "ads", "design", "video"]}
+            />
+            <div className="about-row">
+              <ul className="stats-row">
                 {stats.map((s) => (
-                  <div key={s.label}>
+                  <li key={s.label} data-reveal>
                     <strong><Counter value={s.value} /></strong>
                     <span>{s.label}</span>
-                  </div>
+                  </li>
                 ))}
-              </article>
-
-              <article className="bento-card b-tools" data-reveal>
-                <h3>My toolbox 🧰</h3>
-                <ul className="chips">
-                  {tools.map((t) => <li key={t}>{t}</li>)}
-                </ul>
-              </article>
-
-              <a href={whatsappHref} className="bento-card b-cta" target="_blank" rel="noopener noreferrer" data-reveal>
-                <span className="hand">I reply fast on WhatsApp ⚡</span>
-                <span className="b-cta-row">Say hi <Icon name="arrow" size={18} /></span>
-              </a>
+              </ul>
+              <p className="now" data-reveal>
+                <span className="dot" /> Currently {current.role} at {current.place.split(",")[0]}
+              </p>
             </div>
           </div>
         </section>
@@ -286,17 +182,19 @@ export function Portfolio() {
           <div className="container">
             <div className="section-head" data-reveal>
               <span className="kicker">What I do</span>
-              <h2>Everything you need to grow online, from one person</h2>
+              <h2>Services</h2>
             </div>
-            <div className="grid services-grid">
+            <ul className="service-list">
               {services.map((s, i) => (
-                <article key={s.title} className="card service" data-reveal style={{ transitionDelay: `${(i % 4) * 70}ms` }}>
-                  <span className="icon"><Icon name={s.icon} size={24} /></span>
+                <li key={s.title} className="service-row" data-reveal>
+                  <span className="sr-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="sr-icon"><Icon name={s.icon} size={22} /></span>
                   <h3>{s.title}</h3>
                   <p>{s.text}</p>
-                </article>
+                  <span className="sr-arrow" aria-hidden="true"><Icon name="arrow" size={20} /></span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -306,7 +204,6 @@ export function Portfolio() {
             <div className="section-head" data-reveal>
               <span className="kicker">Selected work</span>
               <h2>Websites I&apos;ve built</h2>
-              <p className="section-lead">Real, live websites for real clients. Click any of them and have a look around.</p>
             </div>
 
             <a href={featuredProject.url} className="featured-project" target="_blank" rel="noopener" data-reveal>
@@ -325,11 +222,6 @@ export function Portfolio() {
                 <h3>{featuredProject.title}</h3>
                 <span className="tag">{featuredProject.tag}</span>
                 <p>{featuredProject.text}</p>
-                <ul className="checks">
-                  {featuredProject.points.map((pt) => (
-                    <li key={pt}><span className="check"><Icon name="check" size={14} /></span>{pt}</li>
-                  ))}
-                </ul>
                 <span className="btn">
                   Visit website <Icon name="arrow" size={16} />
                 </span>
@@ -349,7 +241,7 @@ export function Portfolio() {
         {testimonials.length > 0 && (
           <section id="reviews" className="section soft">
             <div className="container">
-              <div className="section-head center" data-reveal>
+              <div className="section-head" data-reveal>
                 <span className="kicker">Kind words</span>
                 <h2>What clients say</h2>
               </div>
@@ -370,68 +262,20 @@ export function Portfolio() {
 
         {/* Journey */}
         <section id="journey" className="section soft">
-          <div className="container narrow">
-            <div className="section-head center" data-reveal>
+          <div className="container">
+            <div className="section-head" data-reveal>
               <span className="kicker">My journey</span>
               <h2>Where I&apos;ve been</h2>
             </div>
-            <ol className="timeline">
-              {experience.map((e) => (
-                <li key={e.role + e.period} data-reveal>
+            <ol className="journey">
+              {experience.map((e, i) => (
+                <li key={e.role + e.period} data-reveal style={{ transitionDelay: `${i * 100}ms` }}>
                   <span className="period">{e.period}</span>
                   <h3>{e.role}</h3>
-                  <p className="place"><Icon name="pin" size={16} /> {e.place}</p>
-                  <p>{e.text}</p>
+                  <p className="place"><Icon name="pin" size={15} /> {e.place.split(",")[0]}</p>
                 </li>
               ))}
             </ol>
-          </div>
-        </section>
-
-        {/* Work with me */}
-        <section id="hire" className="section">
-          <div className="container">
-            <div className="section-head center" data-reveal>
-              <span className="kicker">Work with me</span>
-              <h2>How can I help you?</h2>
-              <p className="section-lead">Pick what sounds like you, send me a message, and we&apos;ll figure out the rest together.</p>
-            </div>
-            <div className="grid grid-3">
-              {workWithMe.map((w, i) => (
-                <a
-                  key={w.title}
-                  href={whatsappLink(w.message)}
-                  className="card help-card"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-reveal
-                  style={{ transitionDelay: `${i * 90}ms` }}
-                >
-                  <span className="help-emoji" aria-hidden="true">{w.emoji}</span>
-                  <h3>{w.title}</h3>
-                  <p>{w.text}</p>
-                  <span className="visit">Let&apos;s talk <Icon name="arrow" size={16} /></span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section id="faq" className="section soft">
-          <div className="container narrow">
-            <div className="section-head center" data-reveal>
-              <span className="kicker">FAQ</span>
-              <h2>Questions people ask me</h2>
-            </div>
-            <div data-reveal>
-              {faqs.map((f) => (
-                <details key={f.q} className="faq">
-                  <summary>{f.q}<span className="plus" aria-hidden="true" /></summary>
-                  <p>{f.a}</p>
-                </details>
-              ))}
-            </div>
           </div>
         </section>
 
