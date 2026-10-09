@@ -1,16 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Caveat, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import { site } from "@/config/site";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+const hand = Caveat({ subsets: ["latin"], display: "swap", weight: ["600", "700"], variable: "--font-hand" });
 const display = Plus_Jakarta_Sans({ subsets: ["latin"], display: "swap", weight: ["500", "600", "700", "800"], variable: "--font-display" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: site.title.en, template: `%s | ${site.name}` },
-  description: site.description.en,
+  title: { default: site.title, template: `%s | ${site.name}` },
+  description: site.description,
   keywords: [...site.keywords],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
@@ -19,10 +20,10 @@ export const metadata: Metadata = {
     locale: "en_PK",
     url: "/",
     siteName: site.name,
-    title: site.title.en,
-    description: site.description.en,
+    title: site.title,
+    description: site.description,
   },
-  twitter: { card: "summary_large_image", title: site.title.en, description: site.description.en },
+  twitter: { card: "summary_large_image", title: site.title, description: site.description },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   // After adding the site to Google Search Console, paste the verification code here:
   // verification: { google: "your-code" },
@@ -38,7 +39,7 @@ const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={display.variable} suppressHydrationWarning>
+    <html lang="en" className={`${display.variable} ${hand.variable}`} suppressHydrationWarning>
       <body className={inter.className}>
         {/* Lets CSS hide scroll-reveal elements only when JavaScript is running. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />

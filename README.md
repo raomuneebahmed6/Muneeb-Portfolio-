@@ -5,12 +5,8 @@ Built with Next.js (App Router) and made for Vercel.
 
 ## Edit your content
 
-All content (contact details, services, projects, experience, FAQs) is in **`src/config/site.ts`**,
-and fixed page text (headings, buttons) is in **`src/config/ui.ts`**. Every text has an English (`en`)
-and a Roman Urdu (`ur`) version.
-
-- English page: `/`
-- Roman Urdu page: `/ur` (switch with the button in the header)
+All content (contact details, services, projects, experience, FAQs) is in **`src/config/site.ts`**.
+Section headings and the page layout are in `src/components/Portfolio.tsx`.
 
 Client reviews go in `testimonials` in `src/config/site.ts`. Drafts to send to clients for approval
 are in `docs/review-drafts.md`.
