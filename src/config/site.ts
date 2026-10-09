@@ -107,17 +107,17 @@ export const experience = [
 
 // Highlighted project shown in a large spotlight above the project grid.
 export const featuredProject = {
-  title: "Nibaha Haq",
-  url: "https://nibahahaq.com/",
-  image: "/projects/nibaha-haq.webp",
-  tag: "Next.js · Agency Website",
-  text: "A complete website for Nibaha Haq, a digital marketing and technology agency. It presents the agency's services, training courses, portfolio and blog in one fast, modern site built to turn visitors into clients.",
+  title: "LMS Handling",
+  url: "https://lmshandling.com/",
+  image: "/projects/lms-handling.webp",
+  tag: "Custom Website · Education",
+  text: "A complete student support website for Virtual University (VU) students, built for Nibaha Haq. Students pick a service, find their degree and course code, and reach the team on WhatsApp in one tap.",
   points: [
-      "Built with Next.js: fast, SEO-ready and mobile-friendly",
-      "8 service areas: SEO, social media, web development, Meta & Google Ads, YouTube automation, graphic design",
-      "Courses, portfolio and blog sections",
-      "Clear calls to action for free consultations and quotes",
-    ],
+    "Custom-built, fast and mobile-friendly",
+    "Degree-wise pages and course-code tables for 600+ VU courses",
+    "Handy tools like a CGPA calculator and study scheme",
+    "Notes, blog, reviews and one-tap WhatsApp contact",
+  ],
 };
 
 // Live client websites. Keep only links that still work.
