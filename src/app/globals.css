@@ -301,10 +301,11 @@ p { margin: 0 0 1em; }
 .avatar-ring { position: absolute; inset: 6% 6% 0; border-radius: 50%; background: radial-gradient(circle at 50% 35%, #dbe7ff, #eef4ff 60%, transparent 61%); }
 .avatar-ring::after { content: ""; position: absolute; inset: -14px; border-radius: 50%; border: 2px dashed var(--blue-100); animation: spin 40s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-.avatar { position: relative; width: 92%; clip-path: inset(-20% -20% 0 -20% round 0 0 46% 46%); }
-.avatar svg { display: block; width: 100%; height: auto; overflow: visible; }
-.avatar .eye { transform-box: fill-box; transform-origin: center; transition: transform .07s ease-in; }
-.avatar .eye.blink { transform: scaleY(.1); }
+.portrait { position: relative; width: 100%; perspective: 900px; will-change: transform; }
+.portrait-tilt { position: relative; transform-style: preserve-3d; }
+.portrait svg { display: block; width: 100%; height: auto; }
+.portrait-main { position: relative; fill: var(--navy-900); filter: drop-shadow(0 18px 30px rgba(10, 31, 77, .18)); }
+.portrait-echo { position: absolute; inset: 0; fill: var(--blue-500); opacity: .22; }
 .avatar-hint { position: absolute; right: -6px; top: 4%; font-size: 1.45rem; color: var(--blue-600); transform: rotate(8deg); animation: bob 3s ease-in-out infinite; }
 .on-touch { display: none; }
 @media (hover: none) { .on-mouse { display: none; } .on-touch { display: inline; } }

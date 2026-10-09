@@ -4,7 +4,7 @@ import { Icon } from "@/components/Icon";
 import { Effects } from "@/components/Effects";
 import { RoleRotator } from "@/components/RoleRotator";
 import { ProjectGrid } from "@/components/ProjectGrid";
-import { Avatar } from "@/components/Avatar";
+import { HeroPortrait } from "@/components/HeroPortrait";
 import { ScrollText } from "@/components/ScrollText";
 import { ScrollStatement } from "@/components/ScrollStatement";
 
@@ -139,10 +139,10 @@ export function Portfolio() {
 
             <div className="hero-visual anim-zoom">
               <div className="avatar-ring" aria-hidden="true" />
-              <Avatar />
+              <HeroPortrait />
               <span className="avatar-hint hand" aria-hidden="true">
-                <span className="on-mouse">move your mouse 👀</span>
-                <span className="on-touch">tap anywhere 👆</span>
+                <span className="on-mouse">scroll &amp; move your mouse 👀</span>
+                <span className="on-touch">scroll down 👇</span>
               </span>
             </div>
           </div>
