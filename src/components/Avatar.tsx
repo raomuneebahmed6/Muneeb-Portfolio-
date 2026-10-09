@@ -77,95 +77,118 @@ export function Avatar() {
     };
   }, [lookX, lookY]);
 
-  const skin = "#efc29c";
-  const skinShade = "#dda57c";
-  const hair = "#1d1612";
+  const hair = "#1b1410";
+  const hairLight = "#3b2a20";
 
   return (
     <div ref={ref} className="avatar" role="img" aria-label="Illustrated avatar of Rao Muneeb that looks towards your cursor">
       <svg viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg">
-        {/* Shirt: blue polo */}
-        <path d="M44 440c4-62 46-92 112-108l44 30 44-30c66 16 108 46 112 108Z" fill="#2563eb" />
-        <path d="M44 440c4-62 46-92 112-108l10 7c-50 18-84 50-90 101Z" fill="#1d4ed8" />
-        <path d="M200 362v78" stroke="#1e40af" strokeWidth="3" />
-        <circle cx="200" cy="384" r="4" fill="#1e3a8a" />
-        <circle cx="200" cy="408" r="4" fill="#1e3a8a" />
+        <defs>
+          <linearGradient id="av-skin" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#f6d0ae" />
+            <stop offset="1" stopColor="#eab88f" />
+          </linearGradient>
+          <linearGradient id="av-jacket" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#1e3a8a" />
+            <stop offset="1" stopColor="#0a1f4d" />
+          </linearGradient>
+          <linearGradient id="av-hair" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#3b2a20" />
+            <stop offset="1" stopColor={hair} />
+          </linearGradient>
+        </defs>
+
+        {/* Clothes: navy jacket over a white tee */}
+        <path d="M128 336c24 12 120 12 144 0l10 104H118Z" fill="#fff" />
+        <path d="M150 334c14 20 86 20 100 0" stroke="#dfe6f3" strokeWidth="8" fill="none" strokeLinecap="round" />
+        <path d="M36 440c4-58 40-92 104-110 8 40 16 76 22 110Z" fill="url(#av-jacket)" />
+        <path d="M364 440c-4-58-40-92-104-110-8 40-16 76-22 110Z" fill="url(#av-jacket)" />
+        <path d="M140 330l-20 18 30 58 8-52Z" fill="#2563eb" />
+        <path d="M260 330l20 18-30 58-8-52Z" fill="#2563eb" />
+        <path d="M74 400c10-20 26-34 46-42" stroke="#2c4aa0" strokeWidth="3" fill="none" strokeLinecap="round" opacity=".6" />
+        <rect x="276" y="384" width="34" height="6" rx="3" fill="#2c4aa0" opacity=".7" />
 
         {/* Neck */}
-        <path d="M168 282h64v60c-14 16-50 16-64 0Z" fill={skinShade} />
-
-        {/* Collar */}
-        <path d="M156 326l44 36-22 26-34-44Z" fill="#1e40af" />
-        <path d="M244 326l-44 36 22 26 34-44Z" fill="#1e40af" />
+        <path d="M172 276h56v54c-12 14-44 14-56 0Z" fill="#dda57c" />
+        <path d="M172 300c18 10 38 10 56 0v-20h-56Z" fill="#000" opacity=".08" />
 
         <motion.g style={{ x: headX, y: headY, rotate: headRotate, transformOrigin: "200px 300px" }}>
           {/* Ears */}
           <motion.g style={{ x: earX }}>
-            <ellipse cx="108" cy="208" rx="16" ry="26" fill={skinShade} />
-            <ellipse cx="292" cy="208" rx="16" ry="26" fill={skinShade} />
+            <ellipse cx="111" cy="200" rx="14" ry="22" fill="#e6ac82" />
+            <ellipse cx="289" cy="200" rx="14" ry="22" fill="#e6ac82" />
+            <path d="M108 192c4-4 8-2 8 6s-2 12-6 12" stroke="#cf9168" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M292 192c-4-4-8-2-8 6s2 12 6 12" stroke="#cf9168" strokeWidth="3" fill="none" strokeLinecap="round" />
           </motion.g>
 
           {/* Face */}
-          <ellipse cx="200" cy="200" rx="94" ry="112" fill={skin} />
-          <motion.ellipse cx="200" cy="200" rx="94" ry="112" fill="#000" opacity="0.06" style={{ x: shadowX }} />
+          <path d="M112 178c0-62 38-96 88-96s88 34 88 96c0 70-30 118-88 128-58-10-88-58-88-128Z" fill="url(#av-skin)" />
+          <motion.path
+            style={{ x: shadowX }}
+            d="M112 178c0-62 38-96 88-96s88 34 88 96c0 70-30 118-88 128-58-10-88-58-88-128Z"
+            fill="#000"
+            opacity="0.05"
+          />
 
-          {/* Beard */}
+          {/* Trimmed beard */}
           <motion.path
             style={{ x: faceX, y: faceY }}
-            d="M106 200C104 270 140 334 200 338C260 334 296 270 294 200C290 214 286 236 276 252C262 270 248 276 236 274C224 272 214 264 200 264C186 264 176 272 164 274C152 276 138 270 124 252C114 236 110 214 106 200Z"
+            d="M113 196c2 62 34 104 87 110 53-6 85-48 87-110-4 30-12 52-26 68-14 14-28 20-40 20-8 4-14 6-21 6s-13-2-21-6c-12 0-26-6-40-20-14-16-22-38-26-68Z"
             fill={hair}
+            opacity="0.92"
           />
 
           <motion.g style={{ x: faceX, y: faceY }}>
-            {/* Cheek blush */}
-            <ellipse cx="146" cy="240" rx="16" ry="8" fill="#e8907a" opacity="0.25" />
-            <ellipse cx="254" cy="240" rx="16" ry="8" fill="#e8907a" opacity="0.25" />
+            {/* Cheeks */}
+            <ellipse cx="146" cy="232" rx="15" ry="8" fill="#f08f7a" opacity="0.3" />
+            <ellipse cx="254" cy="232" rx="15" ry="8" fill="#f08f7a" opacity="0.3" />
 
             {/* Eyebrows */}
             <motion.g style={{ y: browY }}>
-              <path d="M136 176c14-12 34-14 50-6" stroke={hair} strokeWidth="10" strokeLinecap="round" fill="none" />
-              <path d="M264 176c-14-12-34-14-50-6" stroke={hair} strokeWidth="10" strokeLinecap="round" fill="none" />
+              <path d="M140 166c12-10 30-12 44-5" stroke={hair} strokeWidth="8" strokeLinecap="round" fill="none" />
+              <path d="M260 166c-12-10-30-12-44-5" stroke={hair} strokeWidth="8" strokeLinecap="round" fill="none" />
             </motion.g>
 
-            {/* Eyes */}
-            <g className={`eye${blink ? " blink" : ""}`}>
-              <ellipse cx="162" cy="204" rx="18" ry="12" fill="#fff" />
-              <motion.g style={{ x: pupilX, y: pupilY }}>
-                <circle cx="162" cy="204" r="8.5" fill="#4a3426" />
-                <circle cx="162" cy="204" r="4.2" fill="#120c08" />
-                <circle cx="165" cy="200.5" r="2.4" fill="#fff" />
-              </motion.g>
-            </g>
-            <g className={`eye${blink ? " blink" : ""}`}>
-              <ellipse cx="238" cy="204" rx="18" ry="12" fill="#fff" />
-              <motion.g style={{ x: pupilX, y: pupilY }}>
-                <circle cx="238" cy="204" r="8.5" fill="#4a3426" />
-                <circle cx="238" cy="204" r="4.2" fill="#120c08" />
-                <circle cx="241" cy="200.5" r="2.4" fill="#fff" />
-              </motion.g>
-            </g>
+            {/* Eyes (smiling) */}
+            {[164, 236].map((cx) => (
+              <g key={cx} className={`eye${blink ? " blink" : ""}`}>
+                <ellipse cx={cx} cy="196" rx="15" ry="11" fill="#fff" />
+                <motion.g style={{ x: pupilX, y: pupilY }}>
+                  <circle cx={cx} cy="196" r="8" fill="#5a3c28" />
+                  <circle cx={cx} cy="196" r="4" fill="#120c08" />
+                  <circle cx={cx + 3} cy="192.5" r="2.4" fill="#fff" />
+                </motion.g>
+                <path d={`M${cx - 17} 186c8-8 26-8 34 0`} stroke={hair} strokeWidth="3.5" fill="none" strokeLinecap="round" />
+                <path d={`M${cx - 16} 206c9 7 23 7 32 0v6h-32Z`} fill="url(#av-skin)" />
+              </g>
+            ))}
 
             {/* Nose */}
-            <path d="M201 214c-4 16-9 25-5 30 4 4 11 3 14-1" stroke={skinShade} strokeWidth="5" strokeLinecap="round" fill="none" />
+            <path d="M201 204c-3 14-8 22-4 27 4 3 10 2 13-1" stroke="#d29873" strokeWidth="4.5" strokeLinecap="round" fill="none" />
 
-            {/* Mouth and moustache */}
-            <path d="M182 280c10 7 26 7 36 0" stroke="#b5655a" strokeWidth="5" strokeLinecap="round" fill="none" />
-            <path d="M156 268c16-16 34-14 44-8 10-6 28-8 44 8-16-2-30 0-44 6-14-6-28-8-44-6Z" fill={hair} />
-            <path d="M193 292h14l-4 20h-6Z" fill={hair} />
+            {/* Big smile */}
+            <path d="M170 250c12 26 48 26 60 0Z" fill="#7d2b2b" />
+            <path d="M174 251c10 8 42 8 52 0l-2 6c-12 6-36 6-48 0Z" fill="#fff" />
+            <path d="M186 268c8-5 20-5 28 0-8 4-20 4-28 0Z" fill="#e0716a" />
+            <path d="M166 247c4 2 6 5 6 8M234 247c-4 2-6 5-6 8" stroke="#c98563" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+
+            {/* Moustache */}
+            <path d="M166 246c12-10 26-11 34-5 8-6 22-5 34 5-12-1-24 0-34 3-10-3-22-4-34-3Z" fill={hair} />
           </motion.g>
 
-          {/* Hair with a side part */}
-          <motion.path
-            style={{ x: hairX, y: hairY }}
-            d="M106 196c-8-70 26-118 92-124 70-6 112 34 104 120-6-26-16-44-30-56-6 10-26 16-50 12 10-6 16-14 16-22-24 18-70 20-104 10-12 12-22 30-28 60Z"
-            fill={hair}
-          />
-          <motion.path
-            style={{ x: hairX, y: hairY }}
-            d="M150 92c30-18 86-20 116 4-30-8-70-6-104 8Z"
-            fill="#3a2c23"
-            opacity="0.7"
-          />
+          {/* Modern quiff with faded sides */}
+          <motion.g style={{ x: hairX, y: hairY }}>
+            <path d="M114 146c-4 18-4 36 0 54h10c-3-18-3-36 2-52Z" fill={hair} opacity="0.85" />
+            <path d="M286 146c4 18 4 36 0 54h-10c3-18 3-36-2-52Z" fill={hair} opacity="0.85" />
+            <path
+              d="M114 150c-2-50 30-84 78-90 18-26 64-30 92-12 22 14 28 40 18 64-2 14-4 26-10 36-10-22-30-34-56-36-30-2-56 4-80 12-18 6-32 14-42 26Z"
+              fill="url(#av-hair)"
+            />
+            <path d="M162 72c22-22 70-28 100-10-30-4-60 2-82 18Z" fill={hairLight} opacity="0.9" />
+            <path d="M196 60c20-18 56-20 78-4-24-2-46 2-64 12Z" fill="#4a362a" opacity="0.8" />
+            <path d="M150 104c30-14 74-18 110-6" stroke={hairLight} strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.8" />
+            <path d="M138 120c22-26 60-40 98-38M176 70c18 8 40 10 64 4M240 52c18 4 34 18 40 34" stroke="#56402f" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.7" />
+          </motion.g>
         </motion.g>
       </svg>
     </div>
