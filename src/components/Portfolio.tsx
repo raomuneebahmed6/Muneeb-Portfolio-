@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site, services, skills, experience, projects, stats, testimonials, featuredProject } from "@/config/site";
+import { site, services, skills, experience, projects, stats, testimonials, featuredProject, industries } from "@/config/site";
 import { Icon } from "@/components/Icon";
 import { Effects } from "@/components/Effects";
 import { RoleRotator } from "@/components/RoleRotator";
@@ -8,11 +8,12 @@ import { HeroPortrait } from "@/components/HeroPortrait";
 import { ScrollText } from "@/components/ScrollText";
 import { ScrollStatement } from "@/components/ScrollStatement";
 
-const roles = ["Web Developer", "WordPress Developer", "Shopify Developer", "Next.js Developer", "E-commerce Developer"];
+const roles = ["Web Developer", "WordPress Developer", "Shopify Developer", "Next.js Developer", "E-commerce Developer", "CRM & CMS Developer"];
 
 const nav = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
+  { href: "#industries", label: "Industries" },
   { href: "#work", label: "Work" },
   { href: "#contact", label: "Contact" },
 ];
@@ -126,8 +127,8 @@ export function Portfolio() {
                 <span className="sr-only">{roles.join(", ")}</span>
               </p>
               <p className="lead anim-up d4">
-                I build fast, modern websites and online stores that bring you customers. {site.yearsExperience}+ years,
-                25+ websites, clients all over the world.
+                I build websites, online stores, CRMs and CMS for every kind of business, from A to Z.{" "}
+                {site.yearsExperience}+ years, 25+ websites, clients all over the world.
               </p>
               <div className="cta-row anim-up d5">
                 <a href={whatsappHref} className="btn btn-lg" target="_blank" rel="noopener noreferrer">
@@ -146,7 +147,7 @@ export function Portfolio() {
 
         <ScrollText
           top={["WordPress", "WooCommerce", "Shopify", "Next.js", "React"]}
-          bottom={["Business Websites", "Online Stores", "Landing Pages", "Web Apps"]}
+          bottom={["Business Websites", "Online Stores", "CRM", "CMS", "Web Apps"]}
         />
 
         {/* About */}
@@ -194,8 +195,33 @@ export function Portfolio() {
           </div>
         </section>
 
+        {/* Industries */}
+        <section id="industries" className="section">
+          <div className="container">
+            <div className="section-head" data-reveal>
+              <span className="kicker">Industries</span>
+              <h2>Every niche, A to Z</h2>
+              <p className="section-lead">
+                Schools, shops, restaurants, marquees, clinics and more. Whatever your business, I can build its website,
+                online store, CRM or CMS, all in one place.
+              </p>
+            </div>
+            <ul className="industries">
+              {industries.map((n, i) => (
+                <li key={n.name} data-reveal style={{ transitionDelay: `${(i % 4) * 60}ms` }}>
+                  <span className="ind-icon"><Icon name={n.icon} size={22} /></span>
+                  <span className="ind-text">
+                    <strong>{n.name}</strong>
+                    {"example" in n && n.example && <small>e.g. {n.example}</small>}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* Work */}
-        <section id="work" className="section">
+        <section id="work" className="section soft">
           <div className="container">
             <div className="section-head" data-reveal>
               <span className="kicker">Selected work</span>
@@ -257,7 +283,7 @@ export function Portfolio() {
         )}
 
         {/* Journey */}
-        <section id="journey" className="section soft">
+        <section id="journey" className="section">
           <div className="container">
             <div className="section-head" data-reveal>
               <span className="kicker">My journey</span>

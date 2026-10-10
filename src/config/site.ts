@@ -11,8 +11,8 @@ export const site = {
   url: resolveSiteUrl(),
   name: "Rao Muneeb",
   role: "Web Developer",
-  title: "Rao Muneeb — Freelance Web Developer | WordPress, Shopify & Next.js | Islamabad",
-  description: "Rao Muneeb is a freelance web developer in Islamabad with 5+ years of experience and 25+ websites built. Business websites, online stores and web apps with WordPress, WooCommerce, Shopify and Next.js.",
+  title: "Rao Muneeb — Freelance Web Developer | Websites, E-commerce, CRM & CMS | Islamabad",
+  description: "Rao Muneeb is a freelance web developer in Islamabad with 5+ years of experience and 25+ websites built. Business websites, online stores, custom CRM and CMS for every niche: education, e-commerce, restaurants, marquees, healthcare and more.",
   keywords: [
     "Rao Muneeb",
     "web developer Islamabad",
@@ -24,6 +24,11 @@ export const site = {
     "Next.js developer",
     "ecommerce website developer",
     "website design Islamabad",
+    "custom CRM development Pakistan",
+    "custom CMS development",
+    "restaurant website Pakistan",
+    "marquee website design",
+    "school website development",
   ],
   photo: "/rao-muneeb.webp",
   yearsExperience: 5,
@@ -44,6 +49,8 @@ export const services = [
   { icon: "code", title: "Business Websites", text: "Clean, professional websites that explain what you do and turn visitors into enquiries." },
   { icon: "cart", title: "E-commerce Stores", text: "WooCommerce and Shopify stores with products, payments, delivery and order tracking." },
   { icon: "layers", title: "Custom Web Apps", text: "Fast, modern sites and web apps built with Next.js and React." },
+  { icon: "users", title: "Custom CRM", text: "Manage leads, customers, bookings and sales in one dashboard built around how your business works." },
+  { icon: "dashboard", title: "Custom CMS & Admin Panels", text: "Update your website, products and content yourself, no developer needed." },
   { icon: "funnel", title: "Landing Pages", text: "Focused one-page sites for a product, offer or campaign, built to convert." },
   { icon: "refresh", title: "Website Redesign", text: "Old or slow website? I rebuild it with a fresh design without losing your content." },
   { icon: "search", title: "Speed & SEO Setup", text: "Fast loading, mobile-friendly and set up properly for Google from day one." },
@@ -51,8 +58,24 @@ export const services = [
   { icon: "wrench", title: "Maintenance & Support", text: "Updates, backups, security and quick fixes whenever you need them." },
 ];
 
+// Niches I build for. `example` points to a real project from the list below.
+export const industries = [
+  { icon: "book", name: "Education & Schools", example: "LMS Handling" },
+  { icon: "cart", name: "E-commerce & Retail", example: "Zoom Haier Store" },
+  { icon: "utensils", name: "Restaurants & Cafés" },
+  { icon: "rings", name: "Marquees & Events", example: "Trendzent" },
+  { icon: "heart", name: "Hospitals & Clinics", example: "Bilal Hospital" },
+  { icon: "building", name: "Construction & Real Estate", example: "AGC Renovation" },
+  { icon: "sparkle", name: "Beauty & Cosmetics", example: "ACM Cosmetics" },
+  { icon: "truck", name: "Transport & Moving", example: "EIQAN" },
+  { icon: "wrench", name: "Repair & Local Services", example: "MidlandPCS" },
+  { icon: "smile", name: "Kids & Entertainment", example: "Little Explorers World" },
+  { icon: "dashboard", name: "SaaS & Business Software", example: "eKarobar360" },
+  { icon: "briefcase", name: "Corporate & B2B", example: "Pioneer Group" },
+];
+
 export const skills = [
-  { group: "Development", items: ["WordPress", "WooCommerce", "Shopify", "Next.js", "React", "HTML / CSS", "JavaScript", "PHP", "Elementor"] },
+  { group: "Development", items: ["WordPress", "WooCommerce", "Shopify", "Next.js", "React", "HTML / CSS", "JavaScript", "PHP", "Elementor", "CRM", "CMS"] },
   { group: "Tools", items: ["Figma", "Git", "Vercel", "cPanel", "Search Console", "GA4"] },
 ];
 

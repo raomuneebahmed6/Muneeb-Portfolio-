@@ -26,6 +26,51 @@ const paths: Record<string, React.ReactNode> = {
     </>
   ),
   wrench: <path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.3-1.3a4 4 0 0 0-5-5L14 6Z M3 21l6-6" />,
+  users: (
+    <>
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6" />
+    </>
+  ),
+  dashboard: (
+    <>
+      <rect x="3" y="3" width="8" height="10" rx="2" />
+      <rect x="13" y="3" width="8" height="6" rx="2" />
+      <rect x="13" y="11" width="8" height="10" rx="2" />
+      <rect x="3" y="15" width="8" height="6" rx="2" />
+    </>
+  ),
+  book: <path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5ZM4 21a2 2 0 0 1 2-2h13v2H6M9 7h6" />,
+  utensils: <path d="M7 3v18M4 3v6a3 3 0 0 0 6 0V3M17 21V3c-2.5 1-4 4-4 8h4" />,
+  rings: (
+    <>
+      <circle cx="9" cy="14" r="6" />
+      <circle cx="15" cy="14" r="6" />
+      <path d="M9 3l2 3h-4ZM15 3l2 3h-4Z" />
+    </>
+  ),
+  heart: <path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9ZM7 12h3l1.5-3 2 5 1.5-2h2" />,
+  building: <path d="M4 21V5l8-3v19M12 21V9l8 3v9M2 21h20M7 8h2M7 12h2M7 16h2M15 14h2M15 17h2" />,
+  sparkle: <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z" />,
+  truck: (
+    <>
+      <path d="M2 6h12v10H2ZM14 9h4l3 3v4h-7" />
+      <circle cx="6" cy="18" r="2" />
+      <circle cx="17" cy="18" r="2" />
+    </>
+  ),
+  smile: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8 14a5 5 0 0 0 8 0M9 9.5h.01M15 9.5h.01" />
+    </>
+  ),
+  briefcase: (
+    <>
+      <rect x="3" y="7" width="18" height="13" rx="2" />
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18" />
+    </>
+  ),
   arrow: <path d="M7 17 17 7M8 7h9v9" />,
   arrowUp: <path d="M12 19V5M5 12l7-7 7 7" />,
   phone: <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" />,
