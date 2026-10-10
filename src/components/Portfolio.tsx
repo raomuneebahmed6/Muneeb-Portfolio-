@@ -8,7 +8,7 @@ import { HeroPortrait } from "@/components/HeroPortrait";
 import { ScrollText } from "@/components/ScrollText";
 import { ScrollStatement } from "@/components/ScrollStatement";
 
-const roles = ["Web Developer", "SEO Expert", "Meta Ads Specialist", "Google Ads Expert", "Social Media Marketer", "Graphic Designer", "Video Editor"];
+const roles = ["Web Developer", "WordPress Developer", "Shopify Developer", "Next.js Developer", "E-commerce Developer"];
 
 const nav = [
   { href: "#about", label: "About" },
@@ -126,8 +126,8 @@ export function Portfolio() {
                 <span className="sr-only">{roles.join(", ")}</span>
               </p>
               <p className="lead anim-up d4">
-                I build websites and run ads that bring customers. {site.yearsExperience}+ years, 25+ websites, clients
-                all over the world.
+                I build fast, modern websites and online stores that bring you customers. {site.yearsExperience}+ years,
+                25+ websites, clients all over the world.
               </p>
               <div className="cta-row anim-up d5">
                 <a href={whatsappHref} className="btn btn-lg" target="_blank" rel="noopener noreferrer">
@@ -140,17 +140,13 @@ export function Portfolio() {
             <div className="hero-visual anim-zoom">
               <div className="avatar-ring" aria-hidden="true" />
               <HeroPortrait />
-              <span className="avatar-hint hand" aria-hidden="true">
-                <span className="on-mouse">scroll &amp; move your mouse 👀</span>
-                <span className="on-touch">scroll down 👇</span>
-              </span>
             </div>
           </div>
         </section>
 
         <ScrollText
-          top={["Websites", "SEO", "Meta Ads", "Google Ads", "Social Media"]}
-          bottom={["Graphic Design", "Video Editing", "Online Stores", "Branding"]}
+          top={["WordPress", "WooCommerce", "Shopify", "Next.js", "React"]}
+          bottom={["Business Websites", "Online Stores", "Landing Pages", "Web Apps"]}
         />
 
         {/* About */}
@@ -158,8 +154,8 @@ export function Portfolio() {
           <div className="container">
             <span className="kicker" data-reveal>About me</span>
             <ScrollStatement
-              text="I started freelancing in 2021. Since then I have worked in agencies in Lahore and Islamabad and built websites for brands in Pakistan, the USA, Europe and the Gulf. I do both sides: I build your website and bring people to it with SEO, ads, design and video."
-              highlight={["websites", "both", "SEO", "ads", "design", "video"]}
+              text="I started freelancing in 2021. Since then I have worked in agencies in Lahore and Islamabad and built 25+ websites for brands in Pakistan, the USA, Europe and the Gulf. Every site I build is fast, mobile-friendly and ready for Google from day one."
+              highlight={["25+", "websites", "fast", "mobile-friendly", "Google"]}
             />
             <div className="about-row">
               <ul className="stats-row">

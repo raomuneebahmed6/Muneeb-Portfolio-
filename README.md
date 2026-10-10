@@ -1,6 +1,6 @@
 # Rao Muneeb — Portfolio
 
-Personal portfolio of Rao Muneeb, Digital Marketer & Web Developer (Lahore & Islamabad).
+Personal portfolio of Rao Muneeb, freelance Web Developer (Islamabad).
 Built with Next.js (App Router) and made for Vercel.
 
 ## Edit your content

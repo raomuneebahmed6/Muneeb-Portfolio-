@@ -10,24 +10,20 @@ function resolveSiteUrl(): string {
 export const site = {
   url: resolveSiteUrl(),
   name: "Rao Muneeb",
-  role: "Digital Marketer & Web Developer",
-  title: "Rao Muneeb — Freelance Digital Marketer & Web Developer | Lahore & Islamabad",
-  description: "Rao Muneeb is a freelance digital marketer and web developer with 5+ years of experience in Lahore and Islamabad. Websites, SEO, social media marketing, Meta Ads, Google Ads, graphic design and video editing.",
+  role: "Web Developer",
+  title: "Rao Muneeb — Freelance Web Developer | WordPress, Shopify & Next.js | Islamabad",
+  description: "Rao Muneeb is a freelance web developer in Islamabad with 5+ years of experience and 25+ websites built. Business websites, online stores and web apps with WordPress, WooCommerce, Shopify and Next.js.",
   keywords: [
     "Rao Muneeb",
-    "digital marketer Lahore",
-    "digital marketer Islamabad",
-    "web developer Lahore",
     "web developer Islamabad",
-    "SEO expert Pakistan",
-    "Google Ads expert",
-    "Meta Ads specialist",
-    "social media marketing Pakistan",
-    "social media manager Islamabad",
-    "graphic designer Islamabad",
-    "video editor Pakistan",
-    "freelance digital marketer Pakistan",
+    "web developer Lahore",
     "freelance web developer Pakistan",
+    "WordPress developer Pakistan",
+    "WooCommerce developer",
+    "Shopify developer Pakistan",
+    "Next.js developer",
+    "ecommerce website developer",
+    "website design Islamabad",
   ],
   photo: "/rao-muneeb.webp",
   yearsExperience: 5,
@@ -45,21 +41,19 @@ export const site = {
 
 // What I do. Short and friendly, one line each.
 export const services = [
-  { icon: "code", title: "Websites & Online Stores", text: "WordPress, WooCommerce, Shopify or Next.js. Fast, mobile-friendly and built to sell." },
-  { icon: "search", title: "SEO", text: "Getting you found on Google, so customers come to you without paying for every click." },
-  { icon: "social", title: "Social Media", text: "Posting, page management and content that keeps your brand active and growing." },
-  { icon: "meta", title: "Meta Ads", text: "Facebook and Instagram campaigns that bring leads and sales, not just likes." },
-  { icon: "ads", title: "Google Ads", text: "Search, Shopping and YouTube ads in front of people already looking for you." },
-  { icon: "design", title: "Graphic Design", text: "Posts, ad creatives, logos and banners that look clean and on brand." },
-  { icon: "video", title: "Video Editing", text: "Reels, TikToks and video ads with captions, music and motion that stop the scroll." },
-  { icon: "chart", title: "Tracking & Reports", text: "GA4, Pixel and Tag Manager set up properly, with simple reports you can understand." },
+  { icon: "code", title: "Business Websites", text: "Clean, professional websites that explain what you do and turn visitors into enquiries." },
+  { icon: "cart", title: "E-commerce Stores", text: "WooCommerce and Shopify stores with products, payments, delivery and order tracking." },
+  { icon: "layers", title: "Custom Web Apps", text: "Fast, modern sites and web apps built with Next.js and React." },
+  { icon: "funnel", title: "Landing Pages", text: "Focused one-page sites for a product, offer or campaign, built to convert." },
+  { icon: "refresh", title: "Website Redesign", text: "Old or slow website? I rebuild it with a fresh design without losing your content." },
+  { icon: "search", title: "Speed & SEO Setup", text: "Fast loading, mobile-friendly and set up properly for Google from day one." },
+  { icon: "server", title: "Hosting & Migration", text: "Domain, hosting, SSL and moving your site to a new server without downtime." },
+  { icon: "wrench", title: "Maintenance & Support", text: "Updates, backups, security and quick fixes whenever you need them." },
 ];
 
 export const skills = [
-  { group: "Marketing", items: ["SEO", "Google Ads", "Meta Ads", "Social Media", "Content Strategy", "Email Marketing"] },
-  { group: "Websites", items: ["WordPress CMS", "WooCommerce", "Shopify", "Next.js", "E-commerce", "HTML / CSS / JS"] },
-  { group: "Design & Video", items: ["Photoshop", "Illustrator", "Canva", "Premiere Pro", "After Effects", "CapCut"] },
-  { group: "Tools", items: ["GA4", "Tag Manager", "Search Console", "Ahrefs / SEMrush", "Meta Business Suite", "Figma"] },
+  { group: "Development", items: ["WordPress", "WooCommerce", "Shopify", "Next.js", "React", "HTML / CSS", "JavaScript", "PHP", "Elementor"] },
+  { group: "Tools", items: ["Figma", "Git", "Vercel", "cPanel", "Search Console", "GA4"] },
 ];
 
 export const experience = [
@@ -67,19 +61,19 @@ export const experience = [
     period: "2025 — Present",
     role: "Senior Web Developer & Manager",
     place: "Swiftwave Digital, Bahria Town Phase 4, Islamabad",
-    text: "Lead website development and manage projects end to end, from planning and design to launch, SEO and client handover.",
+    text: "Lead website development and manage projects end to end, from planning and design to launch and client handover.",
   },
   {
     period: "2022 — 2025",
-    role: "Digital Marketer & Web Developer",
+    role: "Web Developer",
     place: "Logico Info Tech, Lahore",
-    text: "Three years building WordPress and WooCommerce websites and running SEO, Google Ads and social media campaigns for local and international clients.",
+    text: "Three years building WordPress and WooCommerce websites for local and international clients.",
   },
   {
     period: "2021 — 2022",
-    role: "Freelance Web Developer & Digital Marketer",
+    role: "Freelance Web Developer",
     place: "Self-employed",
-    text: "Started out building WordPress websites, managing social media pages and running first ad campaigns for small businesses.",
+    text: "Started out building WordPress websites for small businesses.",
   },
 ];
 
@@ -133,7 +127,7 @@ export const projects = [
     url: "https://www.ekarobar360.com/",
     image: "/projects/ekarobar360.webp",
     tag: "Custom Website · SaaS",
-    text: "Marketing site for a Pakistani business app covering POS, inventory, customer udhaar, expenses and reports.",
+    text: "Website for a Pakistani business app covering POS, inventory, customer udhaar, expenses and reports.",
   },
   {
     title: "Aroma Curls",

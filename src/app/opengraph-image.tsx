@@ -25,7 +25,7 @@ export default function OpengraphImage() {
         <div style={{ fontSize: 96, fontWeight: 800, marginTop: 16 }}>{site.name}</div>
         <div style={{ fontSize: 48, marginTop: 8, color: "#d6d9e5" }}>{site.role}</div>
         <div style={{ fontSize: 30, marginTop: 40, color: "#b7c4e2" }}>
-          {`${site.yearsExperience}+ years · SEO · Google & Meta Ads · Websites`}
+          {`${site.yearsExperience}+ years · WordPress · Shopify · Next.js`}
         </div>
       </div>
     ),

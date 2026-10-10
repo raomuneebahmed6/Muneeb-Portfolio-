@@ -7,38 +7,25 @@ const paths: Record<string, React.ReactNode> = {
       <path d="m20 20-4-4" />
     </>
   ),
-  social: (
-    <>
-      <circle cx="18" cy="5" r="3" />
-      <circle cx="6" cy="12" r="3" />
-      <circle cx="18" cy="19" r="3" />
-      <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
-    </>
-  ),
-  meta: <path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1ZM16 8a5 5 0 0 1 0 8M19 5a9 9 0 0 1 0 14" />,
-  ads: (
-    <>
-      <rect x="3" y="4" width="18" height="16" rx="2" />
-      <path d="M7 15l2.5-6 2.5 6M7.8 13h3.4M15 9v6h1.5a2.5 2.5 0 0 0 0-6Z" />
-    </>
-  ),
-  design: (
-    <>
-      <path d="M12 3a9 9 0 1 0 0 18c1 0 1.5-.8 1.5-1.5 0-.4-.2-.8-.4-1.1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8Z" />
-      <circle cx="7.5" cy="10.5" r="1" />
-      <circle cx="10.5" cy="7" r="1" />
-      <circle cx="15" cy="7.5" r="1" />
-    </>
-  ),
-  video: (
-    <>
-      <rect x="2" y="6" width="14" height="12" rx="2" />
-      <path d="m16 10 6-3v10l-6-3" />
-    </>
-  ),
   funnel: <path d="M3 4h18l-7 8v6l-4 2v-8L3 4Z" />,
-  chart: <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />,
   check: <path d="m5 12 5 5L20 7" />,
+  cart: (
+    <>
+      <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.5L21 8H6" />
+      <circle cx="10" cy="20" r="1.4" />
+      <circle cx="17" cy="20" r="1.4" />
+    </>
+  ),
+  layers: <path d="m12 3 9 5-9 5-9-5 9-5ZM3 13l9 5 9-5M3 17.5l9 5 9-5" />,
+  refresh: <path d="M20 11a8 8 0 0 0-14.6-4.5L3 9M3 4v5h5M4 13a8 8 0 0 0 14.6 4.5L21 15M21 20v-5h-5" />,
+  server: (
+    <>
+      <rect x="3" y="4" width="18" height="7" rx="2" />
+      <rect x="3" y="13" width="18" height="7" rx="2" />
+      <path d="M7 7.5h.01M7 16.5h.01" />
+    </>
+  ),
+  wrench: <path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.3-1.3a4 4 0 0 0-5-5L14 6Z M3 21l6-6" />,
   arrow: <path d="M7 17 17 7M8 7h9v9" />,
   arrowUp: <path d="M12 19V5M5 12l7-7 7 7" />,
   phone: <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" />,
